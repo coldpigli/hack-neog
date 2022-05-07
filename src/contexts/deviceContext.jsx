@@ -7,12 +7,12 @@ const useDevice = () => useContext(DeviceContext);
 
 const deviceReducer = (state, action) => {
     switch (action.type) {
-        case "1":
-            
-            break;
-    
+        case "ROTATE_DEVICE":
+            return state.map((device)=>{
+                return (device.id===action.payload)?{...device, landscape: !device.landscape}:device
+            })    
         default:
-            break;
+            return state;
     }
 }
 

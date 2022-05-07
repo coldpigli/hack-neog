@@ -25,6 +25,10 @@
     font-size: 3rem;
 }
 
+.rotate{
+    cursor: pointer;
+}
+
 .metaInfo p{
     font-size: 3rem;
 }
