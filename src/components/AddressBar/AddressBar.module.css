@@ -1,0 +1,24 @@
+.addressHeader{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.urlFeed input{
+    width: 30rem;
+    padding: 0.5rem;   
+    height: 2.5rem;
+    color: #fbfbfb;
+    background-color: transparent;
+    border: 1px solid #fbfbfb;
+    border-radius: 3rem;
+}
+
+.fireButton{
+    height: 100%;
+    width: 5rem;
+    border-radius: 2rem;
+    background-color: #1C7D5E;
+}

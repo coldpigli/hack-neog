@@ -1,6 +1,6 @@
-import Fontjoy from "./Fontjoy";
-import Responsively from "./Responsively";
-import Landing from "./Landing";
+import Fontjoy from "./Fontjoy/Fontjoy";
+import Responsively from "./Responsively/Responsively";
+import Landing from "./Landing/Landing";
 
 export{
     Fontjoy,
