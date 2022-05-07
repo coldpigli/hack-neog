@@ -10,6 +10,9 @@ const Landing = () => {
         <div>
         <Link to="/responsively">Responsively</Link>
         </div>
+        <div>
+        <Link to="/color-contrast">Color Contrast</Link>
+        </div>
     </div>
   )
 }
