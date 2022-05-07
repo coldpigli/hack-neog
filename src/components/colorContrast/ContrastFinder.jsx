@@ -2,7 +2,7 @@ import { useColorContrast } from "context/colorContrastContext";
 import { useEffect, useState } from "react";
 
 export const ContrastFinder = () => {
-  const { colorContrastState, colorContrastDispatch } = useColorContrast();
+  const { colorContrastState } = useColorContrast();
 
   const {
     redText,
@@ -57,7 +57,7 @@ useEffect(() => {
   let rgb2 = [redBackground, greenBackground, blueBackground];
   setContrastRatio(contrast(rgb1, rgb2).toFixed(2));
   contrastStatusHandler()
-}, [textColor, backgroundColor]);
+}, [textColor, backgroundColor, contrastRatio]);
 
 
   return (
