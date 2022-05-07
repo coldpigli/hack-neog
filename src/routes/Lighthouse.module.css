@@ -1,0 +1,11 @@
+.score_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.score_card {
+  min-width: 10rem;
+  min-height: 10rem;
+  margin: 1rem;
+}
