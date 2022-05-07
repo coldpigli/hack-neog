@@ -1,0 +1,30 @@
+.color_box {
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.copy_text {
+  display: block;
+
+  font-weight: normal;
+}
+.palette_container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  display: block;
+  padding: 0.8rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+}
