@@ -7,17 +7,26 @@
 .frameHeader{
     display: flex;
     color: white;
+    gap: 2rem;
     align-items: center;
 }
 
+.screenshot{
+    cursor: pointer;
+}
+
+.frameHeader span{
+    font-size: 3rem;
+}
 .metaInfo{
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 3rem;
 }
 
 .metaInfo p{
-    font-size: 1rem;
+    font-size: 3rem;
 }
 
 
