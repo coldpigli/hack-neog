@@ -5,9 +5,9 @@ import { BackgroundChecker } from "../../components/colorContrast/BackgroundChec
 import { ContrastFinder } from "../../components/colorContrast/ContrastFinder";
 import { ReverseAndRandom } from "components/colorContrast/ReverseAndRandom";
 
-
 export const ColorContrast = () => {
   const { colorContrastState, colorContrastDispatch } = useColorContrast();
+
   return (
     <div
       className="color-contrast-container"
@@ -19,10 +19,20 @@ export const ColorContrast = () => {
 
       <div className="color-setter-container">
         <TextChecker />
-        <br/>
+        <br />
         <BackgroundChecker />
         <ContrastFinder />
         <ReverseAndRandom />
+
+        <a  target="_blank"
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            `Hey 👋 everyone, Test our new project on developer tools `
+          )}&url=${encodeURIComponent(
+            "(link of the project)"
+          )}&via=vishruta_patil`}
+        >
+          <button>Tweet</button>
+        </a>
       </div>
     </div>
   );
