@@ -4,9 +4,9 @@ import { fontArray } from "./fontArray";
 import { AiTwotoneUnlock, AiTwotoneLock } from "react-icons/ai";
 
 const Fontjoy = () => {
-  const [fontOne, setFontOne] = useState("Montserrat");
-  const [fontTwo, setFontTwo] = useState("Lora");
-  const [fontThree, setFontThree] = useState("Oswald");
+  const [fontOne, setFontOne] = useState("IBM Plex Sans");
+  const [fontTwo, setFontTwo] = useState("IBM Plex Sans");
+  const [fontThree, setFontThree] = useState("IBM Plex Sans");
   const [firstLock, setFirstLock] = useState(false);
   const [secondLock, setSecondLock] = useState(false);
   const [thirdLock, setThirdLock] = useState(false);
@@ -26,60 +26,76 @@ const Fontjoy = () => {
     setFontThree(thirdFont);
   }
   return (
-    <>
-      <div className={`${styles.container}`}>
-        <button onClick={randomFontGenerator} className={`${styles.btn}`}>
-          Generate
-        </button>
-
+    <div className={styles.font_wrapper}>
+      <div className={`${styles.font_container}`}>
         <div className={`${styles.row}`}>
-          <span>
-            {fontOne}&nbsp;
-            <span onClick={() => setFirstLock(!firstLock)}>
-              {!firstLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
-            </span>
-          </span>
+          <span className={styles.font_parent}>{fontOne}&nbsp;</span>
           <h1
-            className={styles.remove_outline}
+            className={`${styles.remove_outline} ${styles.textOne}`}
             style={{ fontFamily: fontOne }}
             contenteditable="true"
           >
-            Very good way
+            Color Blindness
           </h1>
-        </div>
-        <div className={`${styles.row}`}>
-          <span>
-            {fontTwo}&nbsp;
-            <span onClick={() => setSecondLock(!secondLock)}>
-              {!secondLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
-            </span>
-          </span>
-          <h3
-            className={styles.remove_outline}
-            style={{ fontFamily: fontTwo }}
-            contentEditable={true}
+          <span
+            onClick={() => setFirstLock(!firstLock)}
+            className={`${styles.action_btn} ${
+              !firstLock ? styles.lockedIcon : styles.unlockedIcon
+            }`}
           >
-            Second heading which is the only
-          </h3>
+            {!firstLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
+          </span>
         </div>
 
         <div className={`${styles.row}`}>
-          <span>
-            {fontThree}&nbsp;
-            <span onClick={() => setThirdLock(!thirdLock)}>
-              {!thirdLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
-            </span>
+          <span className={styles.font_parent}>{fontTwo}&nbsp;</span>
+          <h3
+            className={`${styles.textTwo} ${styles.remove_outline}`}
+            style={{ fontFamily: fontTwo }}
+            contentEditable={true}
+          >
+            is more common than you think
+          </h3>
+          <span
+            onClick={() => setSecondLock(!secondLock)}
+            className={`${styles.action_btn} ${
+              !firstLock ? styles.lockedIcon : styles.unlockedIcon
+            }`}
+          >
+            {!secondLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
           </span>
+        </div>
+
+        <div className={`${styles.row}`}>
+          <span className={styles.font_parent}>{fontThree}&nbsp;</span>
           <p
-            className={styles.remove_outline}
+            className={`${styles.textThree} ${styles.remove_outline}`}
             style={{ fontFamily: fontThree }}
             contentEditable={true}
           >
-            This is third paragraph
+            1 in 12 men is color blind while only 1 in 200 women have the
+            condition. The condition is often inherited. Other causes include
+            certain eye diseases and medication. More men than women are
+            affected. Colour blindness usually involves the inability to
+            distinguish between shades of red and green.
           </p>
+          <span
+            onClick={() => setThirdLock(!thirdLock)}
+            className={`${styles.action_btn} ${
+              !firstLock ? styles.lockedIcon : styles.unlockedIcon
+            }`}
+          >
+            {!thirdLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
+          </span>
         </div>
       </div>
-    </>
+      <div className={styles.btn_wrapper}>
+        <button onClick={randomFontGenerator} className={`${styles.btn}`}>
+          Generate
+        </button>
+      </div>
+      <div className={styles.bar}></div>
+    </div>
   );
 };
 
