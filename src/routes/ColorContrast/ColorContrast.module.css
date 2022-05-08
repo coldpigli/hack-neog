@@ -1,3 +1,19 @@
 .demoText{
     font-size: 50px;
 }
+
+.colorContrastContainer{
+    min-width: 50%;
+    min-height: 100vh;
+    padding: 1rem;
+}
+.colorPage{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.colorblind{
+    min-width: 50%;
+    min-height: 100vh;
+    padding: 1rem;
+}
