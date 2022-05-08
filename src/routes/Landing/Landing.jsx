@@ -17,6 +17,9 @@ const Landing = () => {
       <div>
         <Link to ="/color-contrast">Color-Contrast</Link>
       </div>
+      <div>
+        <Link to ="/rankings">Rankings</Link>
+      </div>
     </div>
   );
 };
