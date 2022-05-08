@@ -14,6 +14,9 @@ const Landing = () => {
       <div>
         <Link to="/lighthouse">LightHouse</Link>
       </div>
+      <div>
+        <Link to ="/color-contrast">Color-Contrast</Link>
+      </div>
     </div>
   );
 };
