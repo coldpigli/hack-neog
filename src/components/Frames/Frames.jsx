@@ -28,18 +28,28 @@ const Frames = ({ height, width, source, title, icon, landscape, id }) => {
       <div className={styles.frameHeader}>
         <div className={styles.metaInfo}>
           <p>
-            {width} X {height}
+            {width} x {height}
           </p>
         </div>
-        <span className="material-icons md-24">{icon}</span>
-        <div className={styles.screenshot} onClick={downloadScreenshot}>
+        <span
+          className={`${styles.rotate} ${styles.action_btn} material-icons md-24`}
+        >
+          {icon}
+        </span>
+        <div
+          className={`${styles.screenshot} ${styles.action_btn}`}
+          onClick={downloadScreenshot}
+        >
           <span className="material-icons md-24">photo_camera</span>
         </div>
-        {
-          id!==3?<div className={styles.rotate} onClick={rotateDevice}>
-          <span className="material-icons md-24">screen_rotation_alt</span>
-        </div>:null
-        }
+        {id !== 3 ? (
+          <div
+            className={`${styles.rotate} ${styles.action_btn}`}
+            onClick={rotateDevice}
+          >
+            <span className="material-icons md-24">screen_rotation_alt</span>
+          </div>
+        ) : null}
       </div>
       <div
         className={styles.frameContainer}

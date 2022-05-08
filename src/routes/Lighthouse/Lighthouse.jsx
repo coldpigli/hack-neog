@@ -121,7 +121,7 @@ export default function Lighthouse() {
   };
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="content">
       <div className={styles.address_wrapper}>
         <input
           className={styles.input}
