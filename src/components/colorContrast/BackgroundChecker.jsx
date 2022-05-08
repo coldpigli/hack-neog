@@ -5,6 +5,8 @@ import { GET_BACKGROUND_COLOR,
   GET_GREEN_COLOR_FOR_BACKGROUND,
   GET_RED_COLOR_FOR_BACKGROUND, } from "reducer/colorContrast";
 
+import styles from "./BackgroundChecker.module.css";
+
 export const BackgroundChecker = () => {
   const { colorContrastState, colorContrastDispatch } = useColorContrast();
 
@@ -20,7 +22,7 @@ export const BackgroundChecker = () => {
   }, [redBackground, greenBackground, blueBackground]);
 
   return (
-    <div className="text-setter">
+    <div className={styles.textSetter}>
       {/* <p>Your Color : {backgroundColor}</p> */}
       <label>Text Color</label>
       <input
