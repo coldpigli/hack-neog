@@ -4,12 +4,14 @@ import styles from "./Lighthouse.module.css";
 import toast from "react-hot-toast";
 import { Circle } from "rc-progress";
 import Pdf from "react-to-pdf";
+import { useLeaderboard } from "contexts";
 export default function Lighthouse() {
   const [inputUrl, setInputUrl] = useState("https://www.google.com");
   const [scoreData, setScoreData] = useState();
   const [speedMetrics, setSpeedMetrics] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [metric, setMetric] = useState(0);
+  const {leaderboard, setLeaderboard} = useLeaderboard();
 
   const ref = createRef();
   const clickHandler = () => {
@@ -35,10 +37,22 @@ export default function Lighthouse() {
     );
   };
 
+  useEffect(()=>{
+    if(calcAvg()){
+      if(leaderboard.find(item=>item.url===inputUrl)){
+        console.log("Already there")
+      }else{
+      setLeaderboard((prev)=>[...prev,{url: inputUrl, avgScore: (calcAvg()/3).toFixed(1)}])
+      }
+    }
+  },[scoreData])
+
+
   const calcAvg = () => {
-    return scoreData?.reduce((acc, curr) => {
+    const score= scoreData?.reduce((acc, curr) => {
       return (acc += curr.score * 100);
     }, 0);
+    return score;
   };
 
   const handleChange = (e) => {
@@ -116,6 +130,7 @@ export default function Lighthouse() {
     } catch (error) {
       console.log(error);
     } finally {
+
       setIsLoading(false);
     }
   };

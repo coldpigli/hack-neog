@@ -1,6 +1,6 @@
 import {Routes, Route} from "react-router-dom";
 import { ColorContrast } from "routes/ColorContrast/ColorContrast";
-import { Fontjoy, Landing, Lighthouse, Responsively } from "routes";
+import { Fontjoy, Landing, Lighthouse, Rankings, Responsively } from "routes";
 
 const RoutingConfigs = () => {
   return (
@@ -10,6 +10,7 @@ const RoutingConfigs = () => {
         <Route path="/responsively" element={<Responsively/>}/>
         <Route path="/color-contrast" element= {<ColorContrast/>} />
         <Route path="/lighthouse" element={<Lighthouse />} />
+        <Route path="/rankings" element={<Rankings/>}/>
     </Routes>
   );
 };
