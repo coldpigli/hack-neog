@@ -39,6 +39,13 @@ export default function Header() {
             <p>Measure</p>
           </div>
         </NavLink>
+
+        <NavLink to="/rankings">
+          <div className={styles.navItem}>
+            <span className="material-icons">leaderboard</span>
+            <p>Leaderboard</p>
+          </div>
+        </NavLink>
       </div>
     </div>
   );
