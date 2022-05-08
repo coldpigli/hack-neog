@@ -1,6 +1,6 @@
 import { TextChecker } from "../../components/colorContrast/TextChecker";
-import { useColorContrast } from "context/colorContrastContext";
-import style from "./colorContrast.module.css";
+import { useColorContrast } from "contexts/colorContrastContext";
+import style from "./ColorContrast.module.css";
 import { BackgroundChecker } from "../../components/colorContrast/BackgroundChecker";
 import { ContrastFinder } from "../../components/colorContrast/ContrastFinder";
 import { ReverseAndRandom } from "components/colorContrast/ReverseAndRandom";

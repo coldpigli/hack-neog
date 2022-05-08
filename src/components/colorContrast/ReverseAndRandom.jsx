@@ -1,4 +1,4 @@
-import { useColorContrast } from "context/colorContrastContext";
+import { useColorContrast } from "contexts/colorContrastContext";
 import {
   GET_RED_COLOR_FOR_TEXT,
   GET_BLUE_COLOR_FOR_BACKGROUND,

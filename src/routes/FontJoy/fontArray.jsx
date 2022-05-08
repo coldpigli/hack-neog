@@ -1,0 +1,17 @@
+export const fontArray = [
+  "Abril Fatface",
+  "Lobster",
+  "Lora",
+  "Montserrat",
+  "Koulen",
+  "Nunito",
+  "Open Sans",
+  "Oleo Script",
+  "Oswald",
+  "Permanent Marker",
+  "Poppins",
+  "PT Serif",
+  "Tapestry",
+  "Ubuntu",
+  "Water Brush",
+];

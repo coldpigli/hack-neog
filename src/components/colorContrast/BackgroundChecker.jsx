@@ -1,11 +1,9 @@
-import { useColorContrast } from "context/colorContrastContext";
+import { useColorContrast } from "contexts/colorContrastContext";
 import { useEffect, useState } from "react";
-import {
-  GET_BACKGROUND_COLOR,
+import { GET_BACKGROUND_COLOR,
   GET_BLUE_COLOR_FOR_BACKGROUND,
   GET_GREEN_COLOR_FOR_BACKGROUND,
-  GET_RED_COLOR_FOR_BACKGROUND,
-} from "reducer/colorContrast/colorContrastconstants";
+  GET_RED_COLOR_FOR_BACKGROUND, } from "reducer/colorContrast";
 
 export const BackgroundChecker = () => {
   const { colorContrastState, colorContrastDispatch } = useColorContrast();

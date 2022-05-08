@@ -1,1 +1,25 @@
-/* apps basics css  */
+/* CSS Reset */
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    scroll-snap-type: y mandatory;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+    min-height: 100vh;
+}

@@ -1,4 +1,4 @@
-import { useColorContrast } from "context/colorContrastContext";
+import { useColorContrast } from "contexts/colorContrastContext";
 import { useEffect } from "react";
 import {
   GET_BLUE_COLOR_FOR_TEXT,

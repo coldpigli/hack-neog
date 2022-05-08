@@ -1,4 +1,4 @@
-import { useColorContrast } from "context/colorContrastContext";
+import { useColorContrast } from "contexts/colorContrastContext";
 import { useEffect, useState } from "react";
 
 export const ContrastFinder = () => {
