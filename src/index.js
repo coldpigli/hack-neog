@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
-import { AddressProvider, DeviceProvider } from "contexts";
+import { AddressProvider, ColorContrastProvider, DeviceProvider } from "contexts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -10,7 +10,9 @@ root.render(
     <Router>
       <DeviceProvider>
         <AddressProvider>
+        <ColorContrastProvider>
           <App />
+        </ColorContrastProvider>
         </AddressProvider>
         </DeviceProvider>
     </Router>
