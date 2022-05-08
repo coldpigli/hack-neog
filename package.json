@@ -13,7 +13,7 @@
     "react-hot-toast": "^2.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-to-pdf": "^0.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "web-vitals": "^2.1.4"
   }
 }

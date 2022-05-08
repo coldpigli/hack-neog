@@ -5,7 +5,9 @@
   align-items: center;
   width: 90%;
   height: fit-content;
-  outline: 2px solid red;
+  filter: brightness(0.9);
+  background-color: white;
+  border-radius: 1rem;
 }
 
 .score_card {
@@ -30,7 +32,6 @@
 .progressBar {
   width: 5rem;
   height: 5rem;
-  outline: 2px solid;
   border-radius: 1rem;
 }
 
@@ -55,6 +56,23 @@
   transition: all 0.3s ease-in-out;
 }
 
+.secondary_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-color: #fff;
+  border: 2px solid #1672ec;
+  color: #1672ec;
+  transition: all 0.3s ease-in-out;
+}
+
 .btn:hover {
   background-color: var(--);
 }
@@ -75,8 +93,18 @@
   align-items: flex-start;
   width: 90%;
   height: fit-content;
-  outline: 2px solid blue;
   flex-direction: column;
+}
+
+.subtitle_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem auto;
+  align-items: flex-start;
+  width: 90%;
+  height: fit-content;
+  flex-direction: column;
+  border-bottom: 2px solid #e0e0e0;
 }
 .metric_icon {
   width: 1rem;
@@ -86,10 +114,84 @@
 }
 
 .metric_card {
-  min-width: 50%;
+  width: 40%;
   min-height: 5rem;
-  outline: 2px solid;
+  flex-grow: 1;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.lowScore {
+  background-color: #faa09e;
+}
+
+.highScore {
+  background-color: #c5f2c7;
+  border-radius: 50px;
+}
+
+.card_container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.metric_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avg_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+
+.avg_score {
+  position: absolute;
+  font-size: 1.5rem;
+  top: -3.5rem;
+  left: 50%;
+  height: 7rem;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.avgBar {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 1rem;
+}
+
+.avg_copy {
+  width: 50%;
+  margin: 1rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.report {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric_header {
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
