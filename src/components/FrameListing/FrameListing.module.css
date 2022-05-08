@@ -1,0 +1,9 @@
+.frameListing{
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+    width: 200%;
+    transform: scale(0.5);
+    overflow: scroll;
+    transform-origin: 0 0;
+}
