@@ -59,7 +59,7 @@ const Fontjoy = () => {
             style={{ fontFamily: fontTwo }}
             contentEditable={true}
           >
-            Second heading whidcb is the only
+            Second heading which is the only
           </h3>
         </div>
 
@@ -73,11 +73,7 @@ const Fontjoy = () => {
           <p
             className={styles.remove_outline}
             style={{ fontFamily: fontThree }}
-<<<<<<< Updated upstream
             contentEditable={true}
-=======
-            contenteditable={true}
->>>>>>> Stashed changes
           >
             This is third paragraph
           </p>
@@ -87,8 +83,4 @@ const Fontjoy = () => {
   );
 };
 
-<<<<<<< Updated upstream
 export default Fontjoy;
-=======
-export default Fontjoy;
->>>>>>> Stashed changes
