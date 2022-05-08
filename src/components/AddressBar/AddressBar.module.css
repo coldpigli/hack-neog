@@ -1,24 +1,29 @@
-.addressHeader{
-    width: 100%;
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
+.addressHeader {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: flex-start;
+  margin: 1rem auto 2rem;
 }
 
-.urlFeed input{
-    width: 30rem;
-    padding: 0.5rem;   
-    height: 2.5rem;
-    color: #fbfbfb;
-    background-color: transparent;
-    border: 1px solid #fbfbfb;
-    border-radius: 3rem;
+.urlFeed input {
+  padding: 0.75rem 3rem 0.75rem 0.5rem;
+  border-radius: 4px;
+  width: 20rem;
+  margin-right: 0.5rem;
 }
-
-.fireButton{
-    height: 100%;
-    width: 5rem;
-    border-radius: 2rem;
-    background-color: #1C7D5E;
+.fireButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-color: #1672ec;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
 }

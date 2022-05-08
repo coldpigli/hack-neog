@@ -73,10 +73,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.btn:hover {
-  background-color: var(--);
-}
-
 .address_wrapper {
   display: flex;
   flex-flow: row wrap;

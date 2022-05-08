@@ -1,0 +1,42 @@
+.header {
+  height: 12rem;
+  outline: 2px solid;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 1rem 2rem 0;
+  grid-area: header;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+
+.navbar {
+  display: flex;
+  width: fit-content;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  width: 7rem;
+  height: 7rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  background-color: inherit;
+  border-radius: 8px;
+}
+
+.navItem:hover {
+  filter: brightness(0.9);
+}
+
+:global .active {
+  border-radius: 8px;
+}

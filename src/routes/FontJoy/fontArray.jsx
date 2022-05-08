@@ -14,4 +14,5 @@ export const fontArray = [
   "Tapestry",
   "Ubuntu",
   "Water Brush",
+  "IBM Plex Sans",
 ];
