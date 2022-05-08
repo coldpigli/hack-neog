@@ -73,7 +73,7 @@ const Fontjoy = () => {
           <p
             className={styles.remove_outline}
             style={{ fontFamily: fontThree }}
-            contenteditable={true}
+            contentEditable={true}
           >
             This is third paragraph
           </p>
