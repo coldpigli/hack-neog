@@ -73,7 +73,11 @@ const Fontjoy = () => {
           <p
             className={styles.remove_outline}
             style={{ fontFamily: fontThree }}
+<<<<<<< Updated upstream
             contentEditable={true}
+=======
+            contenteditable={true}
+>>>>>>> Stashed changes
           >
             This is third paragraph
           </p>
@@ -83,4 +87,8 @@ const Fontjoy = () => {
   );
 };
 
+<<<<<<< Updated upstream
 export default Fontjoy;
+=======
+export default Fontjoy;
+>>>>>>> Stashed changes
