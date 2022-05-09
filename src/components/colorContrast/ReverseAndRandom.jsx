@@ -7,6 +7,7 @@ import {
   GET_GREEN_COLOR_FOR_BACKGROUND,
   GET_BLUE_COLOR_FOR_TEXT,
 } from "reducer/colorContrast/colorContrastconstants";
+import styles from "./ContrastChecker.module.css";
 
 export const ReverseAndRandom = () => {
   const { colorContrastState, colorContrastDispatch } = useColorContrast();
@@ -85,8 +86,13 @@ export const ReverseAndRandom = () => {
   };
 
   return (
-  <div>
-    <button onClick={reverseHandler}>Reverse</button>
-    <button onClick={randomHandler}>Random</button>
-  </div>
-)};
+    <div className={styles.btn_wrapper}>
+      <button className={styles.btn} onClick={reverseHandler}>
+        <span className="material-icons">repeat</span> Reverse
+      </button>
+      <button className={styles.btn} onClick={randomHandler}>
+        <span className="material-icons">shuffle</span> Random
+      </button>
+    </div>
+  );
+};

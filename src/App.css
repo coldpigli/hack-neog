@@ -30,6 +30,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .App {
@@ -41,14 +42,18 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: 12rem auto;
   grid-template-areas: "header" "content";
-  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .content {
   grid-area: content;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 12rem);
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.invert {
+  filter: invert();
 }

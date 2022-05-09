@@ -4,16 +4,14 @@ const AddressContext = createContext(null);
 
 const useAddress = () => useContext(AddressContext);
 
-const AddressProvider = ({children}) => {
+const AddressProvider = ({ children }) => {
+  const [address, setAddress] = useState("https://aegistube.vercel.app");
 
-    const [address, setAddress] = useState("https://avavya-tv.vercel.app/")
-
-    return <AddressContext.Provider value={{address, setAddress}}>
-        {children}
+  return (
+    <AddressContext.Provider value={{ address, setAddress }}>
+      {children}
     </AddressContext.Provider>
-}
+  );
+};
 
-export{
-    AddressProvider,
-    useAddress
-}
+export { AddressProvider, useAddress };

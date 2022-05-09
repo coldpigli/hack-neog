@@ -35,7 +35,7 @@ const Fontjoy = () => {
             style={{ fontFamily: fontOne }}
             contenteditable="true"
           >
-            Color Blindness
+            Font pairing made simple
           </h1>
           <span
             onClick={() => setFirstLock(!firstLock)}
@@ -54,12 +54,12 @@ const Fontjoy = () => {
             style={{ fontFamily: fontTwo }}
             contentEditable={true}
           >
-            is more common than you think
+            Generate font combinations
           </h3>
           <span
             onClick={() => setSecondLock(!secondLock)}
             className={`${styles.action_btn} ${
-              !firstLock ? styles.lockedIcon : styles.unlockedIcon
+              !secondLock ? styles.lockedIcon : styles.unlockedIcon
             }`}
           >
             {!secondLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}
@@ -73,16 +73,14 @@ const Fontjoy = () => {
             style={{ fontFamily: fontThree }}
             contentEditable={true}
           >
-            1 in 12 men is color blind while only 1 in 200 women have the
-            condition. The condition is often inherited. Other causes include
-            certain eye diseases and medication. More men than women are
-            affected. Colour blindness usually involves the inability to
-            distinguish between shades of red and green.
+            Click (Generate) to create a new font pairing, (Lock) to lock fonts
+            that you want to keep. The goal of font pairing is to select fonts
+            that share an overarching theme yet have a pleasing contrast.
           </p>
           <span
             onClick={() => setThirdLock(!thirdLock)}
             className={`${styles.action_btn} ${
-              !firstLock ? styles.lockedIcon : styles.unlockedIcon
+              !thirdLock ? styles.lockedIcon : styles.unlockedIcon
             }`}
           >
             {!thirdLock ? <AiTwotoneUnlock /> : <AiTwotoneLock />}

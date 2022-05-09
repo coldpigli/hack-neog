@@ -7,7 +7,7 @@ export default function Header() {
     <div className={styles.header}>
       <div className={styles.header_hero}>
         <Link to="/">
-          <h1>Brand name</h1>
+          <h1>W.A.S.P</h1>
         </Link>
       </div>
 
@@ -16,13 +16,6 @@ export default function Header() {
           <div className={styles.navItem}>
             <span className="material-icons">devices</span>
             <p>Responsive</p>
-          </div>
-        </NavLink>
-
-        <NavLink to="/fontjoy">
-          <div className={styles.navItem}>
-            <span className="material-icons">text_fields</span>
-            <p>Font</p>
           </div>
         </NavLink>
 
@@ -36,10 +29,15 @@ export default function Header() {
         <NavLink to="/lighthouse">
           <div className={styles.navItem}>
             <span className="material-icons">speed</span>
-            <p>Measure</p>
+            <p>Metrics</p>
           </div>
         </NavLink>
-
+        <NavLink to="/fontjoy">
+          <div className={styles.navItem}>
+            <span className="material-icons">text_fields</span>
+            <p>Font</p>
+          </div>
+        </NavLink>
         <NavLink to="/rankings">
           <div className={styles.navItem}>
             <span className="material-icons">leaderboard</span>

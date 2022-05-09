@@ -10,8 +10,9 @@ export default function Lighthouse() {
   const [scoreData, setScoreData] = useState();
   const [speedMetrics, setSpeedMetrics] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  const [show, setShow] = useState(false);
   const [metric, setMetric] = useState(0);
-  const {leaderboard, setLeaderboard} = useLeaderboard();
+  const { leaderboard, setLeaderboard } = useLeaderboard();
 
   const ref = createRef();
   const clickHandler = () => {
@@ -28,28 +29,31 @@ export default function Lighthouse() {
         error: "Ouch",
       },
       {
-        position: "bottom-center",
+        position: "top-center",
       }
     );
 
     const speedData = Promise.all([getData(inputUrl)]).then((value) =>
       setSpeedMetrics(value[0])
     );
+    setShow(true);
   };
 
-  useEffect(()=>{
-    if(calcAvg()){
-      if(leaderboard.find(item=>item.url===inputUrl)){
-        console.log("Already there")
-      }else{
-      setLeaderboard((prev)=>[...prev,{url: inputUrl, avgScore: (calcAvg()/3).toFixed(1)}])
+  useEffect(() => {
+    if (calcAvg()) {
+      if (leaderboard.find((item) => item.url === inputUrl)) {
+        console.log("Already there");
+      } else {
+        setLeaderboard((prev) => [
+          ...prev,
+          { url: inputUrl, avgScore: (calcAvg() / 3).toFixed(1) },
+        ]);
       }
     }
-  },[scoreData])
-
+  }, [scoreData]);
 
   const calcAvg = () => {
-    const score= scoreData?.reduce((acc, curr) => {
+    const score = scoreData?.reduce((acc, curr) => {
       return (acc += curr.score * 100);
     }, 0);
     return score;
@@ -130,13 +134,22 @@ export default function Lighthouse() {
     } catch (error) {
       console.log(error);
     } finally {
-
       setIsLoading(false);
     }
   };
 
   return (
     <div ref={ref} className="content">
+      <h2 className={styles.title}>Measure Page Quality</h2>
+      <div className={styles.center_aligned}>
+        <h3 className={styles.subtext}>Steps</h3>
+        <p>1. Insert link of your website</p>
+        <p>2. Click on Check Button</p>
+        <p>
+          3. Go to leaderboard to check how it fared against popular websites.
+        </p>
+      </div>
+
       <div className={styles.address_wrapper}>
         <input
           className={styles.input}
@@ -156,20 +169,17 @@ export default function Lighthouse() {
           )}
         </Pdf>
       </div>
-      {!speedMetrics?.length >= 0 && (
+      {show && (
         <div className={styles.report}>
-          <div>
-            <h1>Measure Page Quality</h1>
-          </div>
           <div className={styles.metrics_wrapper}>
             <div className={styles.metric_header}>Overall</div>
           </div>
 
           <div className={styles.score_wrapper}>
             {scoreData?.map((category) => (
-              <div key={category.id} className={styles.score_card}>
-                <h5 className={styles.score}>{category.score * 100}</h5>
-                <p className={styles.title}>{category.title}</p>
+              <div key={category?.id} className={styles.score_card}>
+                <h5 className={styles.score}>{category?.score * 100}</h5>
+                <p className={styles.title}>{category?.title}</p>
                 <Circle
                   percent={category.score * 100}
                   strokeWidth="7"
@@ -201,7 +211,9 @@ export default function Lighthouse() {
             <div className={styles.metric_header}>Total</div>
           </div>
           <div className={styles.avg_wrapper}>
-            <div className={styles.avg_score}>{(calcAvg() / 3).toFixed(1)}</div>
+            <div className={styles.avg_score}>
+              {calcAvg() ? (calcAvg() / 3).toFixed(1) : 0}
+            </div>
             <Circle
               percent={(calcAvg() / 3).toFixed(1)}
               strokeWidth="7"
