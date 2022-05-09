@@ -3,17 +3,17 @@
 }
 
 .colorContrastContainer {
-  min-width: 50%;
-  min-height: 100vh;
+  width: 50%;
+  flex-grow: 1;
   padding: 1rem;
+  outline: 2px solid;
 }
 .colorPage {
   display: flex;
   flex-wrap: wrap;
 }
 .colorblind {
-  min-width: 45%;
-  min-height: 100vh;
+  min-width: 40%;
   padding: 1rem;
   margin-top: 1rem;
   display: flex;

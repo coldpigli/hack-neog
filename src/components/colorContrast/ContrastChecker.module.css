@@ -1,9 +1,11 @@
 .text_setter {
   display: flex;
   gap: 1rem;
+  width: 90%;
 }
 
 .input {
+  width: 5rem;
   padding: 0rem 1rem;
   border-radius: 6px;
   min-height: 2.5rem;
