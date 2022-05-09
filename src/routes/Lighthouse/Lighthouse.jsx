@@ -24,7 +24,7 @@ export default function Lighthouse() {
     toast.promise(
       responseData,
       {
-        loading: "Fetching scores",
+        loading: "This usually takes a while... wait for 20-30 secs",
         success: "Here you go",
         error: "Ouch",
       },
