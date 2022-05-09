@@ -1,6 +1,5 @@
 .header {
   height: 12rem;
-  outline: 2px solid;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -31,12 +30,10 @@
   margin: 0 0.5rem;
   background-color: inherit;
   border-radius: 8px;
-}
-
-.navItem:hover {
-  filter: brightness(0.9);
+  background-color: white;
 }
 
 :global .active {
   border-radius: 8px;
+  border: 2px solid;
 }

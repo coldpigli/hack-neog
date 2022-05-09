@@ -1,0 +1,80 @@
+.hero {
+  display: flex;
+  height: fit-content;
+  min-height: calc(100vh - 12rem);
+}
+
+.hero_header {
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 125%;
+  margin-top: 1rem;
+}
+
+.hero_subheader {
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 125%;
+}
+
+.hero_desc {
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 138%;
+}
+
+.hero_text {
+  padding: 2rem 3rem;
+  width: 60%;
+}
+.hero_wrapper {
+  display: flex;
+  align-items: center;
+}
+.hero_img {
+  width: 36.75rem;
+  min-width: 20.475rem;
+  border-radius: 144px;
+}
+
+.hero_img video {
+  width: 100%;
+  border-radius: 64px;
+  transition: border-radius cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.text_subheader {
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 125%;
+  text-align: center;
+}
+
+.landing_card {
+  height: 12rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 3rem;
+  border: 2px solid #efefef;
+  border-radius: 6px;
+  margin: 2rem 0.5rem;
+  background-color: #fefefe;
+}
+
+.offerings {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.landing_card:hover {
+  filter: brightness(0.95);
+}
+
+.card_wrapper {
+  width: 45%;
+}
